@@ -1,28 +1,25 @@
-// src/App.js
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Login from "./features/auth/Login";
-import Dashboard from "./pages/Dashboard";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Login from "./features/auth/Login";
+import RequireAuth from "./hoc/RequireAuth";
+import "./styles/App.css";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <ToastContainer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route
           path="/dashboard"
           element={
-            <PrivateRoute>
+            <RequireAuth>
               <Dashboard />
-            </PrivateRoute>
+            </RequireAuth>
           }
         />
       </Routes>
