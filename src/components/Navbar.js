@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Navbar.css"; // Updated the path to point to styles
+import "../styles/Navbar.css";
 import { useDispatch } from "react-redux";
 import { logout } from "../features/auth/authSlice";
 

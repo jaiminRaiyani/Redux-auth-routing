@@ -6,4 +6,4 @@ const store = configureStore({
   reducer: rootReducer,
 });
 
-export default store; // Ensure you have this export
+export default store;

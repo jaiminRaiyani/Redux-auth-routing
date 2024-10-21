@@ -1,4 +1,3 @@
-// src/features/auth/Logout.js
 import React from "react";
 import { useDispatch } from "react-redux";
 import { logout } from "./authActions";

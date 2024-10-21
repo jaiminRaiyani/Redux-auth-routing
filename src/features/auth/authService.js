@@ -1,4 +1,3 @@
-// src/features/auth/authService.js
 const API_URL = "/api/users/";
 
 // Register user
