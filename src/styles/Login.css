@@ -55,7 +55,6 @@
   background-color: #0056b3;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .login-form {
     width: 90%;

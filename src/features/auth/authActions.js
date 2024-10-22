@@ -10,7 +10,7 @@ export const userLogin = (credentials) => async (dispatch) => {
     const response = await axios.post("/api/login", credentials);
 
     const token = response.data.token;
-    localStorage.setItem("token", token); // Store JWT in localStorage
+    localStorage.setItem("token", token);
 
     dispatch(loginSuccess(response.data.user));
   } catch (error) {
@@ -20,6 +20,6 @@ export const userLogin = (credentials) => async (dispatch) => {
 
 // Action for user logout
 export const userLogout = () => (dispatch) => {
-  localStorage.removeItem("token"); // Clear token from storage
+  localStorage.removeItem("token");
   dispatch(logout());
 };

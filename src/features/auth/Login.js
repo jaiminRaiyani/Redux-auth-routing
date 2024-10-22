@@ -15,7 +15,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulating a login request
+    //login request
     if (username === "user" && password === "password") {
       dispatch(loginSuccess({ username }));
       navigate("/dashboard");
