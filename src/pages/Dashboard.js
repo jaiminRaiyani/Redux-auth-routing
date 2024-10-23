@@ -2,6 +2,11 @@ import React from "react";
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
+  const handleActionClick = () => {
+    // Define your action logic here
+    console.log("Action taken!");
+  };
+
   return (
     <div className="dashboard-container">
       <h1 className="dashboard-header">Dashboard</h1>
@@ -25,9 +30,11 @@ const Dashboard = () => {
             <span className="item-value">Value 3</span>
           </div>
         </div>
-
-        <button>Take Action</button>
       </div>
+
+      <button className="action-button" onClick={handleActionClick}>
+        Take Action
+      </button>
     </div>
   );
 };
