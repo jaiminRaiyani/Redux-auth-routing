@@ -3,7 +3,6 @@ import "../styles/Dashboard.css";
 
 const Dashboard = () => {
   const handleActionClick = () => {
-    // Define your action logic here
     console.log("Action taken!");
   };
 
